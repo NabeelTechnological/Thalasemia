@@ -1,0 +1,165 @@
+/* Global Styles */
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.review-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out; /* Animasi masuk */
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+    color: #db3434;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: slideDown 0.8s ease-out; /* Animasi turun */
+}
+
+.description {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    animation: fadeIn 1.2s ease-in-out; /* Animasi masuk */
+}
+
+.review-form .form-group {
+    margin-bottom: 20px;
+    animation: fadeInLeft 0.7s ease-in-out; /* Animasi muncul dari kiri */
+}
+
+.review-form label {
+    display: block;
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+.review-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #dcdcdc;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #2c3e50;
+    transition: border-color 0.3s ease, transform 0.3s ease; /* Transisi border dan transformasi */
+}
+
+.review-form .form-control:focus {
+    border-color: #db3434;
+    outline: none;
+    transform: scale(1.02); /* Efek zoom saat difokuskan */
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #db3434;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efek hover smooth */
+    animation: bounceIn 1s ease-in-out; /* Animasi bounce */
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+    transform: scale(1.05); /* Efek perbesaran saat hover */
+}
+
+/* Mengatur lebar area komentar dan menempatkannya di tengah */
+.fb-comments {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px 0; 
+}
+
+/* Memberi padding pada widget */
+.fb-comments iframe {
+    padding: 10px;
+    border-radius: 8px; 
+    border: 1px solid #ddd;
+    background-color: #f9f9f9; 
+}
+
+/* Mengubah ukuran teks komentar */
+.fb-comments .fb_comment_text {
+    font-size: 14px;
+    color: #333; 
+}
+
+/* Mengubah warna dan gaya nama pengirim */
+.fb-comments .fb_comment_author {
+    font-weight: bold;
+    color: #0056b3; 
+}
+
+
+/* Responsif: Menyesuaikan tampilan pada layar kecil */
+@media (max-width: 600px) {
+    .fb-comments {
+        max-width: 100%; /* Sesuaikan dengan lebar layar kecil */
+        padding: 5px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .review-container {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .btn-submit {
+        font-size: 16px;
+    }
+}

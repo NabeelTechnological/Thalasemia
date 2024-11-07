@@ -1,0 +1,710 @@
+/* General Styles */
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('donor darah.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: fadeInBackground 2s ease-in-out;
+
+
+}
+
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.whatsapp-float {
+    width: 50px;
+    height: 50px;
+    background-color: #25d366;
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 3px #999;
+    cursor: pointer;
+    position: relative;
+}
+
+.whatsapp-icon {
+    width: 100%;
+    height: auto;
+}
+
+.whatsapp-tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    left: -125px; /* Geser ke kiri dari ikon */
+    bottom: 50px; /* Tetap sedikit di atas bawah ikon */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.whatsapp-window {
+    visibility: hidden;
+    width: 200px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    left: -225px; /* Geser lebih jauh ke kiri dari ikon */
+    bottom: -10px; /* Atur posisi agar sejajar */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Menampilkan tooltip dan window saat hover */
+.whatsapp-container:hover .whatsapp-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.whatsapp-container:hover .whatsapp-window {
+    visibility: visible;
+    opacity: 1;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+}
+
+
+
+/* Center the Facebook Comments widget */
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    padding: 20px; /* Add some padding */
+}
+
+/* Responsive Styles for Facebook Comments */
+.fb-comments {
+    max-width: 100%;
+    width: 100%; /* Make sure it takes full width */
+    box-sizing: border-box; /* Ensure padding and borders are included in width */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .centered-container {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .fb-comments {
+        width: 100%; /* Ensure widget is responsive */
+    }
+}
+
+/* Additional Media Queries for Smaller Devices */
+@media (max-width: 480px) {
+    .centered-container {
+        padding: 5px; /* Even smaller padding on very small screens */
+    }
+
+    .fb-comments {
+        width: 100%; /* Make sure widget is responsive */
+    }
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    animation: slideInContainer 1s ease-in-out;
+}
+
+/* General Header Styles */
+header {
+    background-image: linear-gradient(to bottom, #2b0707, #4c150f);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    color: #ffffff; /* Warna teks putih default untuk layar besar */
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Memastikan menu di layar besar ada di tengah */
+    gap: 20px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    padding-left: 70px;
+    margin-left: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 50px; /* Posisi toggle di kanan atas */
+}
+@media (max-width: 1087px) {
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Tampilkan menu horizontal di layar besar */
+/* Tampilkan menu inline di layar besar */
+@media (min-width: 768px) {
+    nav ul {
+        display: flex; /* Tampilkan menu inline di layar besar */
+        flex-direction: row;
+        position: static; /* Jangan ubah posisi menu */
+        background-color: transparent; /* Tidak perlu background di layar besar */
+    }
+
+    .menu-toggle {
+        display: none; /* Sembunyikan toggle di layar besar */
+    }
+
+    nav ul li a {
+        color: #ffffff; /* Warna teks putih di layar besar */
+    }
+}
+
+/* Tampilkan menu toggle di layar kecil */
+/* Menu toggle di kanan pada layar kecil */
+@media (max-width: 1087px) {
+    .menu-toggle {
+        display: block; /* Tampilkan icon toggle di layar kecil */
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 0px; /* Posisi toggle di kanan atas */
+        border-radius: 5px;
+        color: white;
+    }
+
+    nav ul.active {
+        display: flex; /* Tampilkan menu saat toggle aktif */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Berikan jarak antar item menu */
+    }
+
+    nav ul li a {
+        color: #000000; /* Ubah warna teks menjadi hitam di layar kecil */
+        text-align: right; /* Pastikan teks item menu rata kanan */
+    }
+
+    header h1 {
+        color: #000000; /* Ubah warna judul menjadi hitam di layar kecil */
+        text-align: center;
+    }
+}
+
+/* Tampilkan menu toggle di layar kecil */
+/* CSS untuk layar di bawah 1087px */
+/* CSS untuk layar di bawah 1087px */
+@media (max-width: 1087px) {
+    nav ul {
+        display: none; /* Sembunyikan menu di layar kecil secara default */
+        flex-direction: column; /* Atur menu vertikal di layar kecil */
+        background: rgba(255, 255, 255, 0.5); /* Latar belakang putih dengan transparansi */
+        padding: 10px;
+        position: absolute;
+        border-radius: 10px; /* Sudut lebih membulat */
+        z-index: 9999; /* Pastikan lebih tinggi dari elemen lain */
+        opacity: 0; /* Awalnya transparan */
+        height: 0; /* Awalnya tinggi 0 */
+        width: 10px; /* Awalnya lebar kecil */
+        top: 60px;
+        right: 0; /* Mulai dari sisi kanan layar */
+        overflow: hidden; /* Sembunyikan konten yang meluas */
+        backdrop-filter: blur(15px); /* Blur latar belakang */
+        transition: opacity 0.5s ease, height 0.5s ease; /* Transisi animasi */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan halus */
+    }
+
+    nav ul.active {
+        display: flex; /* Tampilkan menu saat toggle diaktifkan */
+        opacity: 1; /* Tampilkan menu */
+        height: 200px; /* Tinggi penuh */
+        width: 100%; /* Lebar penuh */
+        transition: opacity 0.5s ease, height 0.5s ease; /* Transisi animasi */
+        animation: fadeIn 0.5s ease forwards; /* Tambahkan animasi fadeIn */
+    }
+
+    .menu-toggle {
+        display: block; /* Tombol toggle terlihat di layar kecil */
+        cursor: pointer;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Berikan jarak antara item menu */
+        opacity: 0; /* Sembunyikan tulisan awalnya */
+        transform: translateX(-20px); /* Pindahkan item menu sedikit ke kiri */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Animasi untuk opacity dan transform */
+        animation: fadeInItem 0.5s ease forwards; /* Tambahkan animasi fadeInItem */
+    }
+
+    nav ul.active li {
+        opacity: 1; /* Tampilkan tulisan setelah animasi */
+        transform: translateX(0); /* Pindahkan item menu ke posisi semula */
+        animation: fadeInItem 0.5s ease forwards; /* Tambahkan animasi fadeInItem */
+    }
+
+    /* Animasi ketika menu dinonaktifkan (fade out) */
+    nav ul:not(.active) {
+        animation: fadeOut 0.5s ease forwards; /* Tambahkan animasi fadeOut */
+    }
+
+    nav ul li:not(.active) {
+        animation: fadeOutItem 0.5s ease forwards; /* Tambahkan animasi fadeOutItem */
+    }
+
+    nav ul li a {
+        color: #000000; /* Ubah warna teks menjadi hitam di layar kecil */
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2em;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: #e74c3c;
+        transform: scale(1.1);
+    }
+
+    header h1 {
+        color: white; /* Ubah warna judul menjadi putih di layar kecil */
+    }
+}
+
+/* Animasi fadeIn untuk menu */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Transparan di awal */
+    }
+    100% {
+        opacity: 1; /* Solid di akhir */
+    }
+}
+
+
+/* Animasi fadeInItem untuk item menu */
+@keyframes fadeInItem {
+    0% {
+        opacity: 0; /* Transparan di awal */
+        transform: translateX(-20px); /* Pindahkan item menu sedikit ke kiri */
+    }
+    100% {
+        opacity: 1; /* Solid di akhir */
+        transform: translateX(0); /* Posisi semula */
+    }
+}
+
+
+/* Hover Effects for Navigation Links */
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e74c3c;
+    transform: scale(1.1);
+}
+
+
+
+/* Hero Section */
+.hero {
+    color: #ffffff;
+    padding: 100px 0;
+    text-align: center;
+    animation: fadeInHero 2s ease-in;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #ec935c;
+    color: #4d0606;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #c0392b;
+    color: #ffffff;
+}
+
+/* Features Section */
+.features {
+    padding: 50px 0;
+    text-align: center;
+    animation: fadeInFeatures 1.5s ease-in-out;
+}
+
+.features h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    margin-top: 15%;
+}
+
+.feature-item {
+    display: inline-block;
+    width: 40%;
+    padding: 15px;
+    margin: 10px 2%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    animation: zoomInFeature 1.2s ease-in-out;
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
+}
+
+.feature-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Images Styling */
+/* Base Styles */
+.image-container {
+    display: flex;
+    justify-content: center; /* Posisikan gambar di tengah secara horizontal */
+    align-items: center;
+    gap: 20px; /* Beri jarak antar gambar */
+    padding: 20px;
+}
+
+.image-top-right,
+.image-bottom-left {
+    position: absolute;
+    width: 30%;
+    max-width: 100%; /* Pastikan gambar tidak lebih besar dari lebar layar */
+    background-color: white;
+    border: 5px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.image-top-right:hover,
+.image-bottom-left:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile Styles (≤480px) */
+@media (max-width: 320px) {
+    header h1 {
+        font-size: 20px;
+        padding-right: 60px;
+    }
+
+    .menu-toggle {
+        top: 10px;
+        right: 10px;
+    }
+
+    nav ul {    
+        width: 90%;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .features h2 {
+        font-size: 22px;
+    }
+
+    .container {
+        position: relative; /* pastikan kontainer ini menjadi referensi untuk posisi absoult */
+        height: 100vh; /* kontainer memiliki tinggi penuh layar */
+    }
+
+    .image-top-right {
+            width: 90%; /* Gambar hampir penuh di layar kecil */
+            margin: 10px; /* berikan sedikit jarak */
+            display: block; /* Pastikan gambar tidak overlap */
+    }
+    .image-bottom-left {
+        width: 90%; /* Gambar hampir penuh di layar kecil */
+            margin: 10px; /* berikan sedikit jarak */
+            display: block; /* Pastikan gambar tidak overlap */
+            left: 0; /* posisikan di kiri */
+    }
+
+    .feature-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Tablet Styles (481px–1024px) */
+@media (min-width: 320px) and (max-width: 1024px) {
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 8px 14px;
+        font-size: 16px;
+    }
+
+    .features h2 {
+        font-size: 26px;
+    }
+
+    .image-top-right,
+    .image-bottom-left {
+        width: 80%; /* Gambar lebih kecil di tablet */
+        position: relative;
+        margin: 20px auto; /* Posisikan di tengah layar */
+        display: block;
+    }
+
+    .feature-item {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* Laptop Styles (1025px–1366px) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    .container {
+        width: 80%;
+    }
+
+    header h1 {
+        font-size: 2.8em;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .btn {
+        padding: 10px 18px;
+        font-size: 18px;
+    }
+
+    .features h2 {
+        font-size: 28px;
+    }
+
+    .image-top-right {
+        width: 40%;
+        top: 200px;
+        left: 52%; /* Letakkan di kanan atas */
+        margin: 0;
+    }
+
+    .image-bottom-left {
+        width: 40%;
+        top: 200px;
+        right: 52%; /* Letakkan di kiri bawah */
+        margin: 0;
+    }
+
+    .feature-item {
+        width: 45%;
+        margin: 20px 2%;
+    }
+}
+
+/* Desktop Styles (≥1367px) */
+@media (min-width: 1367px) {
+    .container {
+        width: 75%;
+    }
+
+    header h1 {
+        font-size: 3em;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 20px;
+    }
+
+    .features h2 {
+        font-size: 32px;
+    }
+
+    .image-top-right {
+        width: 35%;
+        top: 100px;
+        top: 230px;
+        left: 13%;
+    }
+
+    .image-bottom-left {
+        width: 35%;
+        top: 100px;
+        top: 230px;
+        right: 13%;
+    }
+
+    .feature-item {
+        width: 30%;
+        margin: 20px 1.5%;
+    }
+}
+
+/* Hover Effect for Images */
+.image-top-right:hover,
+.image-bottom-left:hover {
+    transform: scale(1.05); /* Membuat gambar membesar saat dihover */
+}
+
+
+/* Footer */
+footer {
+    background-image: linear-gradient(to top, #2b0707, #4c150f);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInContainer {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInHero {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFeatures {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomInFeature {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
