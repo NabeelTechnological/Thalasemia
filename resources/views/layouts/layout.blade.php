@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THALASEMIA</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link href="{{ asset('css/thalasemia-logo.jpg') }}" rel="icon">
 </head>
 <body>
 <header>

@@ -42,12 +42,5 @@
             </div>
         </div>
     </section>
-    <div class="whatsapp-container">
-        <a href="https://wa.me/6287866885151?text=Halo, saya ingin bertanya" class="whatsapp-float" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:50px;height:50px;">
-        </a>
-        <div class="whatsapp-tooltip">Chat Sekarang</div>
-        <div class="whatsapp-window">Jika ada bantuan, chat di sini</div>
-    </div>
 
 @endsection

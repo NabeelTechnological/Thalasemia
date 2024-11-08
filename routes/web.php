@@ -7,6 +7,8 @@ Route::get('/', [WebsiteStatisticController::class, 'addView'])->name('home');
 Route::post('/button-click', [WebsiteStatisticController::class, 'addButtonClick'])->name('button.click');
 
 
+
+
 Route::get('/', function () {
     return view('home');
 })->name('welcome');
